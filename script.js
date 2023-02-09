@@ -11,3 +11,15 @@ function makeRows(rows, cols) {
 };
 
 makeRows(16, 16);
+
+const hov = document.getElementsByClassName("grid-item");
+
+for (var i = 0; i < hov.length; i++) {
+  hov[i].addEventListener('mouseenter', (event) => {
+    event.target.style.color = "red";
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 800);
+  }, false);
+}
+
