@@ -16,10 +16,17 @@ const hov = document.getElementsByClassName("grid-item");
 
 for (var i = 0; i < hov.length; i++) {
   hov[i].addEventListener('mouseenter', (event) => {
-    event.target.style.color = "red";
+    event.target.style.backgroundColor = "red";
     setTimeout(() => {
-      event.target.style.color = "";
-    }, 800);
+      event.target.style.backgroundColor = "";
+    }, 400);
   }, false);
 }
 
+const btn = document.querySelector("#btn");
+let person = "";
+btn.addEventListener('click', function (e) {
+  person = prompt("Please enter yourname",);
+});
+
+console.log(person);
